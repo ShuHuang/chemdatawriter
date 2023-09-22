@@ -7,3 +7,4 @@ batterydataextractor>=0.0.5
 summa>=1.2.0
 numba==0.54.1
 rouge>=1.0.1
+typing_extensions==4.4.0

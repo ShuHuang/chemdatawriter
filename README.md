@@ -1,4 +1,4 @@
-# chemdatawriter
+# ChemDataWriter
 ChemDataWriter is a transformer-based library for automatically generating research books in the chemistry area.
 
 # Features
@@ -11,11 +11,20 @@ ChemDataWriter is a transformer-based library for automatically generating resea
 - ```latex_generator.py``` reorganises the summarised text and converts it into a LaTeX file
 
 # Installation
+Please install Python version 3.8.10 due to the compatibility of the dependencies.
+
+Create the virtual environment and install the dependencies:
+
+```bash
+python3.8 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+You could also use ```pip``` to install the toolkit once the paper is published:
+
 ```pip install chemdatawriter```  
 
-Note: ChemDataWriter has been tested running in Python3.8.
-
-Note: Available once the paper is accepted
 
 # Usage
 To create a clean paper file with the title, abstract, introduction, and conclusion from the HTML/XML files, and 
@@ -37,6 +46,16 @@ python run_cdw.py \
   --keywords <keywords to screen the papers> \
   --topic_words <topic words of each chapter> \
   --chapter_size <number of papers in each chapter>
+```
+
+# Developer Guide
+Developers are welcome to contribute to the project by either raising an issue or submitting a pull request.
+Please make sure the unit tests are passed before submitting a pull request.
+
+To run the unit tests, run:
+
+```bash
+python -m unittest
 ```
 
 # Acknowledgement

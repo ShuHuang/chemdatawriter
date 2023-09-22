@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 tests.test_summariser
-==========================
+~~~~~~~~~~~~~~~~~~~~~
+
 This module contains the tests for the summariser module.
 """
 import unittest
@@ -34,11 +35,11 @@ class TestDistilBartSummariser(unittest.TestCase):
         summariser = DistilBartSummariser()
         summary = summariser.summarise(self.text)
 
-        expected_summary = ("Literature mining is becoming increasingly popular for researchers to thoroughly explore "
-                            "scientific text and extract such data to create new databases or augment existing databases. "
-                            "Most of the toolkits that mine text are based on machine-learning algorithms which hinder the "
-                            "performance of downstream text-mining tasks. We demonstrate that BatteryDataExtractor "
-                            "exhibits state-of-the-art performance on the evaluation data sets.")
+        expected_summary = (" Literature mining is becoming increasingly popular for researchers to thoroughly explore "
+                            "scientific text and extract such data. Upgrading rule-based or machine-learning-based "
+                            "literature-mining toolkits by embedding transformer models into the software is likely to "
+                            "improve the text-mining performance. To aid the use of BatteryDataExtractor, its code is "
+                            "provided as open-source software.")
 
         self.assertEqual(summary, expected_summary)
 

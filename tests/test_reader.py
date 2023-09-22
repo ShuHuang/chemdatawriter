@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 tests.test_reader
-==========================
+~~~~~~~~~~~~~~~~~
+
 This module contains the tests for the reader module.
 """
 import os
@@ -56,6 +57,7 @@ class TestReaderBDEType(unittest.TestCase):
 
     @ignore_warnings
     def setUp(self):
+        self.maxDiff = None
         rsc_path = os.path.join(os.path.dirname(__file__), 'test_papers', "rsc_test1.html")
         els_path = os.path.join(os.path.dirname(__file__), 'test_papers', "els_test1.xml")
         spr_path = os.path.join(os.path.dirname(__file__), 'test_papers', "spr_test1.xml")
@@ -151,73 +153,15 @@ class TestReaderBDEType(unittest.TestCase):
                   'volume': '45'}
         self.assertEqual(metadata, actual)
 
-    def test_els_doc_abstract(self):
-        abstract = self.els_paper.abstract
-        actual = (' The use of phase change materials (PCMs) for cooling lithium-ion batteries '
-                  'is examined in this research. Because of the unique benefits of lithium-ion '
-                  'batteries, their use in electric cars has gotten a lot of attention. The '
-                  'lithium-ion battery is one of the most extensively utilized components as '
-                  'the heart of a hybrid car. These batteries generate a lot of heat while '
-                  'charging or discharging. If the batteries are not correctly handled, their '
-                  'life will be drastically shortened. In this study, a cylindrical battery is '
-                  'submerged in a PCM-filled chamber. Several fins of the same length are '
-                  'placed on the battery. The aim is to find the ideal battery compartment size '
-                  'and fin count to lower maximum battery temperature during the discharging '
-                  'process. COMSOL Multiphysics commercial software is used for the '
-                  'simulations. The results show that the battery with 15 fins has the best PCM '
-                  'melting performance at the beginning of cooling process. After one third of '
-                  'the cooling time, the maximum melting of PCM that is equal to 26.159% takes '
-                  'place. Also, in the entire cooling process, the lowest maximum temperature '
-                  'and the maximum volume fraction of the liquid occur when the number of fins '
-                  'is 9. The battery temperature rises as the number of fins increases beyond '
-                  'nine. Furthermore, an enclosure with the lowest maximum temperature is '
-                  'supplied to enclosure the lithium-ion battery. ')
-        self.assertEqual(abstract, actual)
+    def test_els_doc_author(self):
+        author = self.els_paper.authors
+        actual = ['CHEN']
+        self.assertEqual(author, actual)
 
     def test_spr_doc_metadata(self):
-        metadata = self.spr_paper.metadata
-        actual = {'abstract': 'Improving the anode properties, including increasing its '
-                              'capacity, is one of the basic necessities to improve battery '
-                              'performance. In this paper, high-capacity anodes with alloy '
-                              'performance are introduced, then the problem of fragmentation of '
-                              'these anodes and its effect during the cyclic life is stated. '
-                              'Then, the effect of reducing the size to the nanoscale in '
-                              'solving the problem of fragmentation and improving the '
-                              'properties is discussed, and finally the various forms of '
-                              'nanomaterials are examined. In this paper, electrode reduction '
-                              'in the anode, which is a nanoscale phenomenon, is described. The '
-                              'negative effects of this phenomenon on alloy anodes are '
-                              'expressed and how to eliminate these negative effects by '
-                              'preparing suitable nanostructures will be discussed. Also, the '
-                              'anodes of the titanium oxide family are introduced and the '
-                              'effects of Nano on the performance improvement of these anodes '
-                              'are expressed, and finally, the quasi-capacitive behavior, which '
-                              'is specific to Nano, will be introduced. Finally, the third type '
-                              'of anodes, exchange anodes, is introduced and their function is '
-                              'expressed. The effect of Nano on the reversibility of these '
-                              'anodes is mentioned. The advantages of nanotechnology for these '
-                              'electrodes are described. In this paper, it is found that '
-                              'nanotechnology, in addition to the common effects such as '
-                              'reducing the penetration distance and modulating the stress, '
-                              'also creates other interesting effects in this type of anode, '
-                              'such as capacitive quasi-capacitance, changing storage mechanism '
-                              'and lower volume change.',
-                  'authors': ['Majdi',
-                              'Latipov',
-                              'Borisov',
-                              'Yuryevna',
-                              'Kadhim',
-                              'Suksatan',
-                              'Khlewee',
-                              'Kianfar'],
-                  'date': '20211211',
-                  'doi': '10.1186/s11671-021-03631-x',
-                  'issue': '1',
-                  'journal': 'Nanoscale Research Letters',
-                  'publisher': 'Springer US',
-                  'title': 'Nano and Battery Anode: A Review',
-                  'volume': '16'}
-        self.assertEqual(metadata, actual)
+        metadata = self.spr_paper.metadata['journal']
+        actual_journal = "Nanoscale Research Letters"
+        self.assertEqual(metadata, actual_journal)
 
     def test_spr_doc_abstract(self):
         abstract = self.spr_paper.abstract

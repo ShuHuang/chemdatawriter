@@ -44,9 +44,10 @@ class TransformerSummariser(Summariser):
         """Loads the appropriate model and tokenizer based on the model name."""
         models = {
             "bart": (BartForConditionalGeneration, BartTokenizer),
+            "distilbart": (BartForConditionalGeneration, BartTokenizer),
             "led": (LEDForConditionalGeneration, LEDTokenizer),
             "pegasus": (PegasusForConditionalGeneration, PegasusTokenizer),
-            "t5": (T5ForConditionalGeneration, T5Tokenizer)
+            "long": (T5ForConditionalGeneration, T5Tokenizer)
         }
 
         model_type = self.model_name.split("/")[1].split("-")[0]
