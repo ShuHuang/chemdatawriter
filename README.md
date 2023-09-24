@@ -25,6 +25,13 @@ You could also use ```pip``` to install the toolkit once the paper is published:
 
 ```pip install chemdatawriter```  
 
+Docker image is also available:
+
+```bash
+docker pull sh2009/dockerhub:chemdatawriter.v.0.0.1
+docker run -it sh2009/dockerhub:chemdatawriter.v.0.0.1
+```
+
 
 # Usage
 To create a clean paper file with the title, abstract, introduction, and conclusion from the HTML/XML files, and 
