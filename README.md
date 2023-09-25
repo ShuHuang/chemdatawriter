@@ -65,6 +65,11 @@ To run the unit tests, run:
 python -m unittest
 ```
 
+# Evaluation
+We also provide the evaluation scripts for the topic modelling and paraphrasing models. 
+Please refer to the ```demo.ipynb``` folder for more details. 
+Note that you need to install additional dependencies to run the evaluation scripts according to the instructions in the notebook.
+
 # Acknowledgement
 
 This project was financially supported by the [Science and Technology Facilities Council (STFC)](https://www.ukri.org/councils/stfc/), the [Royal Academy of Engineering](https://raeng.org.uk/) (RCSRF1819\7\10) and [Christ's College, Cambridge](https://www.christs.cam.ac.uk/). The Argonne Leadership Computing Facility, which is a [DOE Office of Science Facility](https://science.osti.gov/), is also acknowledged for use of its research resources, under contract No. DEAC02-06CH11357.
