@@ -34,9 +34,8 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.autosummary',
     'sphinx.ext.napoleon',
-    'rst2pdf.pdfbuilder'
 ]
-pdf_documents = [('index', u'rst2pdf', u'ChemDataWriter Documentation', u'ChemDataWriter'),]
+# pdf_documents = [('index', u'rst2pdf', u'ChemDataWriter Documentation', u'ChemDataWriter'),]
 # Run: "sphinx-build -b pdf source build" to generate pdf.
 
 templates_path = ['_templates']
