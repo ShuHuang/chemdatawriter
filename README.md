@@ -76,4 +76,5 @@ This project was financially supported by the [Science and Technology Facilities
 
 # Citation
 
-TBA
+S.Huang, J. M. Cole, ChemDataWriter: A Transformer-based Toolkit for Auto-generating Books That Summarise Research (2023) DOI: 10.1039/d3dd00159h
+

@@ -20,7 +20,7 @@ Key Highlights of ChemDataWriter:
 
 ChemDataWriter stands as a testament to the fusion of AI and research, making the process of staying updated more streamlined and efficient.
 
-Citing: ChemDataWriter: A Transformer-based Toolkit for Auto-generating Books That Summarise Research
+Citing: S.Huang, J. M. Cole, ChemDataWriter: A Transformer-based Toolkit for Auto-generating Books That Summarise Research (2023) DOI: 10.1039/d3dd00159h
 
 
 
